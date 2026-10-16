@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at top left, #8ec5fc, transparent 35%),
+        radial-gradient(circle at bottom right, #e0c3fc, transparent 35%),
+        linear-gradient(135deg, #667eea, #764ba2);
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 320px;
+    padding: 24px;
+    border-radius: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow:
+        0 20px 40px rgba(31, 38, 135, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+h1 {
+    margin: 0 0 16px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+    width: 100%;
+    height: 65px;
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.72);
+    color: #111827;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    box-shadow: inset 0 2px 8px rgba(31, 38, 135, 0.2);
+}
+
+#display::selection {
+    background: #93c5fd;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 55px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.42);
+    color: white;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+    box-shadow:
+        0 4px 10px rgba(31, 38, 135, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.62);
+    color: #111827;
+    text-shadow: none;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.operator {
+    background: rgba(37, 99, 235, 0.72);
+}
+
+.operator:hover {
+    background: rgba(29, 78, 216, 0.9);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
+.clear {
+    background: rgba(220, 38, 38, 0.75);
+}
+
+.clear:hover {
+    background: rgba(185, 28, 28, 0.9);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
+.equals {
+    background: rgba(22, 163, 74, 0.75);
+}
+
+.equals:hover {
+    background: rgba(21, 128, 61, 0.9);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
+.zero {
+    grid-column: span 2;
+}
